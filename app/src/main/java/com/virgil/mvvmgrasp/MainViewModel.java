@@ -1,11 +1,14 @@
 package com.virgil.mvvmgrasp;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
 import android.util.Log;
 
 import com.kelin.mvvmlight.command.ReplyCommand;
+import com.virgil.mvvmgrasp.home.view.HomeActivity;
 
 /**
  * Created by 陈有余 on 2017/2/13 10:34.
@@ -13,7 +16,7 @@ import com.kelin.mvvmlight.command.ReplyCommand;
 
 public class MainViewModel {
     //context
-    private Activity context;
+    private Context mContext;
     //数据绑定（data field）
     public final ObservableField<String> title = new ObservableField<>();
     public final ObservableField<String> name = new ObservableField<>();
@@ -26,18 +29,26 @@ public class MainViewModel {
     // 一个变量包含了所有关于View Style 相关的字段
     public final ViewStyle viewStyle = new ViewStyle();
 
+    public MainViewModel(Context ctx) {
+        this.mContext = ctx;
+    }
+
     //命令绑定（command）
     public final ReplyCommand clickCommand = new ReplyCommand<>(() -> {
         title.set("娱乐新闻");
     });
 
     public final ReplyCommand isShowTextCommand = new ReplyCommand<>(() -> {
-        if (isShowTextView.get() == true){
+        if (isShowTextView.get() == true) {
             isShowTextView.set(false);
-        }else{
+        } else {
             isShowTextView.set(true);
         }
-        Log.i("isShowTextView",isShowTextView.get()+"");
+        Log.i("isShowTextView", isShowTextView.get() + "");
+    });
+
+    public final ReplyCommand goNextCommand = new ReplyCommand<>(() -> {
+        mContext.startActivity(new Intent().setClass(mContext, HomeActivity.class));
     });
 
     //Child ViewModel

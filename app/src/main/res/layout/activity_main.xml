@@ -21,29 +21,44 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
             android:text="@{viewModel.title}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
             android:text="@{viewModel.name}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
             android:text="@{viewModel.address}"
             android:visibility="@{viewModel.isShowTextView? View.VISIBLE : View.GONE}" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="changeTitle"
+            android:text="更改标题"
+            android:layout_gravity="center_horizontal"
             app:clickCommand="@{viewModel.clickCommand}" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="isShowText"
+            android:text="是否显示地址"
+            android:layout_gravity="center_horizontal"
             app:clickCommand="@{viewModel.isShowTextCommand}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入下一页"
+            android:layout_gravity="center_horizontal"
+            app:clickCommand="@{viewModel.goNextCommand}"/>
     </LinearLayout>
 </layout>

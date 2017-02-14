@@ -9,7 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.QueryMap;
 
 /**
- * Created by 陈有余 on 2017/2/13 16:48.
+ * Created by virgil on 2017/2/13 16:48.
  */
 
 public interface RequestApi {

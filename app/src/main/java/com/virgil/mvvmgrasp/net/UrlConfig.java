@@ -1,7 +1,7 @@
 package com.virgil.mvvmgrasp.net;
 
 /**
- * Created by 陈有余 on 2017/2/13 16:52.
+ * Created by virgil on 2017/2/13 16:52.
  */
 
 public class UrlConfig {
