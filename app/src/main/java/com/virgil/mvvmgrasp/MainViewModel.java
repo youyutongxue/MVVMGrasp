@@ -7,7 +7,11 @@ import android.databinding.ObservableField;
 import android.util.Log;
 
 import com.kelin.mvvmlight.command.ReplyCommand;
+import com.virgil.mvvmgrasp.base.App;
+import com.virgil.mvvmgrasp.details.view.DetailsActivity;
 import com.virgil.mvvmgrasp.home.view.HomeActivity;
+import com.virgil.mvvmgrasp.loading.LoadingActivity;
+import com.virgil.mvvmgrasp.utils.NavigateUtils;
 
 /**
  * Created by 陈有余 on 2017/2/13 10:34.
@@ -49,6 +53,10 @@ public class MainViewModel {
 
     public final ReplyCommand goNextCommand = new ReplyCommand<>(() -> {
         mContext.startActivity(new Intent().setClass(mContext, HomeActivity.class));
+    });
+
+    public final ReplyCommand loadingCommand = new ReplyCommand<>(() -> {
+        NavigateUtils.startActivity(App.getAppContext().getCurrentActivity(), LoadingActivity.class);
     });
 
     //Child ViewModel

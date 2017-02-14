@@ -60,5 +60,12 @@
             android:text="进入下一页"
             android:layout_gravity="center_horizontal"
             bind:clickCommand="@{viewModel.goNextCommand}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading"
+            android:layout_gravity="center_horizontal"
+            bind:clickCommand="@{viewModel.loadingCommand}"/>
     </LinearLayout>
 </layout>

@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".home.view.HomeActivity" />
-        <activity android:name=".details.view.DetailsActivity"></activity>
+        <activity android:name=".details.view.DetailsActivity" />
+        <activity android:name=".loading.LoadingActivity"></activity>
     </application>
 
 </manifest>
