@@ -12,7 +12,7 @@ import com.virgil.mvvmgrasp.home.viewmodel.HomeViewModel;
 import com.virgil.mvvmgrasp.widget.recyclerview.decoration.DividerItemDecoration;
 import com.virgil.mvvmgrasp.widget.recyclerview.decoration.SpacesItemDecoration;
 
-public class HomeActivity extends BaseActivity<ActivityHomeBinding> {
+public class HomeActivity extends BaseActivity<ActivityHomeBinding>{
     private HomeViewModel mHomeViewModel;
     private Context mContext = this;
 

@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers"/>
+
+        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+
+        <import type="com.virgil.mvvmgrasp.R" />
+
         <variable
             name="viewModel"
             type="com.virgil.mvvmgrasp.home.viewmodel.HomeViewModel" />
@@ -22,6 +26,6 @@
             android:layout_height="wrap_content"
             app:itemView="@{viewModel.itemHomeView}"
             app:items="@{viewModel.totalList}"
-            app:layoutManager="@{LayoutManagers.linear()}"/>
+            app:layoutManager="@{LayoutManagers.linear()}" />
     </RelativeLayout>
 </layout>

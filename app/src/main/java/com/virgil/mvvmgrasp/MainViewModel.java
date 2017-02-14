@@ -1,13 +1,12 @@
 package com.virgil.mvvmgrasp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
 import android.util.Log;
 
-import com.kelin.mvvmlight.command.ReplyCommand;
+import com.databinding.command.ReplyCommand;
 import com.virgil.mvvmgrasp.home.view.HomeActivity;
 
 /**

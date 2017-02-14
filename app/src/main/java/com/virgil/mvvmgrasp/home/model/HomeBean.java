@@ -1,11 +1,8 @@
 package com.virgil.mvvmgrasp.home.model;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.util.Log;
 
-import com.kelin.mvvmlight.command.ReplyCommand;
-import com.virgil.mvvmgrasp.base.App;
+import com.databinding.command.ReplyCommand;
 
 import java.util.List;
 
@@ -21,9 +18,9 @@ public class HomeBean {
      * message : OK
      */
 
-    private int code;
-    private DataBean data;
-    private String message;
+    public int code;
+    public DataBean data;
+    public String message;
 
     public int getCode() {
         return code;
@@ -57,14 +54,14 @@ public class HomeBean {
          * url :
          */
 
-        private List<CandidatesBean> candidates;
+        public List<CandidatesBean> candidates;
         /**
          * editable : false
          * id : 101
          * name : 精选
          */
 
-        private List<ChannelsBean> channels;
+        public List<ChannelsBean> channels;
 
         public List<CandidatesBean> getCandidates() {
             return candidates;
@@ -83,73 +80,16 @@ public class HomeBean {
         }
 
         public static class CandidatesBean {
-            private boolean editable;
-            private int id;
-            private String name;
-            private String url;
-
-            public boolean isEditable() {
-                return editable;
-            }
-
-            public void setEditable(boolean editable) {
-                this.editable = editable;
-            }
-
-            public int getId() {
-                return id;
-            }
-
-            public void setId(int id) {
-                this.id = id;
-            }
-
-            public String getName() {
-                return name;
-            }
-
-            public void setName(String name) {
-                this.name = name;
-            }
-
-            public String getUrl() {
-                return url;
-            }
-
-            public void setUrl(String url) {
-                this.url = url;
-            }
-
+            public boolean editable;
+            public int id;
+            public String name;
+            public String url;
         }
 
         public static class ChannelsBean {
-            private boolean editable;
-            private int id;
-            private String name;
-
-            public boolean isEditable() {
-                return editable;
-            }
-
-            public void setEditable(boolean editable) {
-                this.editable = editable;
-            }
-
-            public int getId() {
-                return id;
-            }
-
-            public void setId(int id) {
-                this.id = id;
-            }
-
-            public String getName() {
-                return name;
-            }
-
-            public void setName(String name) {
-                this.name = name;
-            }
+            public boolean editable;
+            public int id;
+            public String name;
 
             public ReplyCommand clickCommand = new ReplyCommand<HomeBean.DataBean.ChannelsBean>((homeBean) -> {
                 Log.i("item", homeBean.name + "s");
