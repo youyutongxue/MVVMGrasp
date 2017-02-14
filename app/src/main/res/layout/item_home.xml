@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="android.view.View"/>
-        <import type="com.virgil.mvvmgrasp.R"/>
-        <variable name="data" type="com.virgil.mvvmgrasp.home.model.HomeBean.DataBean.ChannelsBean"/>
+
+        <import type="android.view.View" />
+
+        <import type="com.virgil.mvvmgrasp.R" />
+
+        <variable
+            name="data"
+            type="com.virgil.mvvmgrasp.home.model.HomeBean.DataBean.ChannelsBean" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:clickCommand="@{data.clickCommand}"
+        app:param="@{data}">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.name}"/>
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:text="@{data.name}"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:text="@{`用户评价(`+data.name+`)`}" />
     </LinearLayout>
 </layout>
