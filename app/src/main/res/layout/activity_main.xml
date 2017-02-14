@@ -6,6 +6,7 @@
     <data>
 
         <import type="android.view.View" />
+        <import type="com.virgil.mvvmgrasp.R"/>
         <variable
             name="viewModel"
             type="com.virgil.mvvmgrasp.MainViewModel" />
@@ -21,36 +22,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="30sp"
-            android:text="@{viewModel.title}" />
+            android:text="@{viewModel.title}"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="30sp"
-            android:text="@{viewModel.name}" />
+            android:text="@{viewModel.name}"
+            android:textSize="30sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="30sp"
             android:text="@{viewModel.address}"
+            android:textSize="30sp"
             android:visibility="@{viewModel.isShowTextView? View.VISIBLE : View.GONE}" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="更改标题"
             android:layout_gravity="center_horizontal"
-            bind:clickCommand="@{viewModel.clickCommand}"/>
-
-        <!--<Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="更改标题"
-            android:layout_gravity="center_horizontal"
             bind:clickCommand="@{viewModel.clickCommand}" />
 
         <Button
@@ -65,6 +59,6 @@
             android:layout_height="wrap_content"
             android:text="进入下一页"
             android:layout_gravity="center_horizontal"
-            bind:clickCommand="@{viewModel.goNextCommand}"/>-->
+            bind:clickCommand="@{viewModel.goNextCommand}"/>
     </LinearLayout>
 </layout>

@@ -3,6 +3,7 @@ package com.virgil.mvvmgrasp.home.viewmodel;
 import android.content.Context;
 import android.databinding.ObservableArrayList;
 import android.databinding.ObservableList;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.virgil.mvvmgrasp.BR;
@@ -46,6 +47,7 @@ public class HomeViewModel {
                     List<HomeBean.DataBean.ChannelsBean> channels = response.body().getData().getChannels();
                     totalList.addAll(channels);
                     ToastCustomUtils.showSuccessToast(mContext, "success");
+                    Log.i("channels",channels.size()+"");
                 }
             }
 

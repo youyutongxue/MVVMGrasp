@@ -6,7 +6,7 @@ import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
 import android.util.Log;
 
-import com.databinding.command.ReplyCommand;
+import com.kelin.mvvmlight.command.ReplyCommand;
 import com.virgil.mvvmgrasp.home.view.HomeActivity;
 
 /**
@@ -31,6 +31,7 @@ public class MainViewModel {
     public MainViewModel(Context ctx) {
         this.mContext = ctx;
     }
+
 
     //命令绑定（command）
     public final ReplyCommand clickCommand = new ReplyCommand<>(() -> {
