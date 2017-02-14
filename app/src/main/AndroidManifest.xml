@@ -3,6 +3,7 @@
     package="com.virgil.mvvmgrasp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".base.App"
         android:allowBackup="true"
@@ -17,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.view.HomeActivity"></activity>
+        <activity android:name=".home.view.HomeActivity" />
+        <activity android:name=".details.view.DetailsActivity"></activity>
     </application>
 
 </manifest>

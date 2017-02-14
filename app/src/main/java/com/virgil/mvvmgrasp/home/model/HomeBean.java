@@ -1,8 +1,12 @@
 package com.virgil.mvvmgrasp.home.model;
 
+import android.os.Bundle;
 import android.util.Log;
 
 import com.kelin.mvvmlight.command.ReplyCommand;
+import com.virgil.mvvmgrasp.base.App;
+import com.virgil.mvvmgrasp.details.view.DetailsActivity;
+import com.virgil.mvvmgrasp.utils.NavigateUtils;
 
 import java.util.List;
 
@@ -149,10 +153,9 @@ public class HomeBean {
 
             public ReplyCommand clickCommand = new ReplyCommand<HomeBean.DataBean.ChannelsBean>((homeBean) -> {
                 Log.i("item", homeBean.name + "s");
-                /*Bundle bundle = new Bundle();
-                bundle.putString("name",homeBean.name );
-                Activity currentActivity = App.getAppContext().getCurrentActivity();
-                currentActivity.startActivity(App.getAppContext().getCurrentActivity(), FindDetailActivity.class, bundle);*/
+                Bundle bundle = new Bundle();
+                bundle.putString("name", homeBean.name);
+                NavigateUtils.startActivity(App.getAppContext().getCurrentActivity(), DetailsActivity.class, bundle);
             });
         }
     }
