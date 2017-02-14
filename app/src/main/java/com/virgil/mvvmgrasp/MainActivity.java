@@ -1,15 +1,10 @@
-package com.virgil.mvvmgrasp.view;
+package com.virgil.mvvmgrasp;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-
-import com.virgil.mvvmgrasp.R;
 import com.virgil.mvvmgrasp.base.BaseActivity;
 import com.virgil.mvvmgrasp.databinding.ActivityMainBinding;
-import com.virgil.mvvmgrasp.viewmodel.MainViewModel;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
+    //private MainViewModel mainViewModel;
     private MainViewModel mainViewModel;
 
     @Override

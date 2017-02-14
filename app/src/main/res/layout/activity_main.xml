@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.virgil.mvvmgrasp.viewmodel.MainViewModel" />
+            type="com.virgil.mvvmgrasp.MainViewModel" />
     </data>
 
     <LinearLayout

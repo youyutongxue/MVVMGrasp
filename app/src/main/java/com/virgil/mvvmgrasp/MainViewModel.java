@@ -1,4 +1,4 @@
-package com.virgil.mvvmgrasp.viewmodel;
+package com.virgil.mvvmgrasp;
 
 import android.app.Activity;
 import android.databinding.ObservableBoolean;
