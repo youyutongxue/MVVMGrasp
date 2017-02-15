@@ -1,4 +1,4 @@
-package com.virgil.mvvmgrasp.net;
+package com.virgil.mvvmgrasp.net.http;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -18,8 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.view.HomeActivity" />
-        <activity android:name=".details.view.DetailsActivity" />
+        <activity
+            android:name=".home.view.HomeActivity"
+            android:theme="@style/swipeBackPageStyle" />
+        <activity
+            android:name=".details.view.DetailsActivity"
+            android:theme="@style/swipeBackPageStyle" />
         <activity android:name=".loading.LoadingActivity"></activity>
     </application>
 

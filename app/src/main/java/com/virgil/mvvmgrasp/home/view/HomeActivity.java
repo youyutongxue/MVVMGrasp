@@ -7,12 +7,13 @@ import android.support.v7.widget.DefaultItemAnimator;
 
 import com.virgil.mvvmgrasp.R;
 import com.virgil.mvvmgrasp.base.BaseActivity;
+import com.virgil.mvvmgrasp.base.BaseActivityforSwipeBack;
 import com.virgil.mvvmgrasp.databinding.ActivityHomeBinding;
 import com.virgil.mvvmgrasp.home.viewmodel.HomeViewModel;
 import com.virgil.mvvmgrasp.widget.recyclerview.decoration.DividerItemDecoration;
 import com.virgil.mvvmgrasp.widget.recyclerview.decoration.SpacesItemDecoration;
 
-public class HomeActivity extends BaseActivity<ActivityHomeBinding>{
+public class HomeActivity extends BaseActivityforSwipeBack<ActivityHomeBinding> {
     private HomeViewModel mHomeViewModel;
     private Context mContext = this;
 
